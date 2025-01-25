@@ -112,7 +112,6 @@
 
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
-
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS studios;
@@ -120,7 +119,6 @@ DROP TABLE IF EXISTS movie_roles;
 
 -- Create new tables, according to your domain model
 -- TODO!
-
 CREATE TABLE movies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT,
@@ -149,7 +147,6 @@ CREATE TABLE movie_roles (
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
-
 INSERT INTO studios (
     name
 ) VALUES 
@@ -208,7 +205,6 @@ INSERT INTO movie_roles (
 
 -- The SQL statement for the movies output
 -- TODO!
-
 SELECT movies.title, movies.year_released, movies.MPAA_rating, studios.name
 FROM movies INNER JOIN studios ON studios.id = movies.studio_id;
 
@@ -220,7 +216,6 @@ FROM movies INNER JOIN studios ON studios.id = movies.studio_id;
 
 -- The SQL statement for the cast output
 -- TODO!
-
 SELECT movies.title, actors.name, movie_roles.role
 FROM movies 
 INNER JOIN movie_roles ON movie_roles.movie_id = movies.id
