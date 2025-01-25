@@ -150,6 +150,48 @@ CREATE TABLE movie_roles (
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+INSERT INTO movies (
+    title,
+    year_released,
+    MPAA_rating
+) VALUES 
+(   "Batman Begins",
+    "2005",
+    "PG-13"),
+(   "The Dark Knight",
+    "2008",
+    "PG-13"),
+(   "The Dark Knight Rises",
+    "2012",
+    "PG-13");
+
+INSERT INTO actors (
+    name
+) VALUES
+    ("Christian Bale"),
+    ("Michael Caine"),
+    ("Liam Neeson"),
+    ("Katie Holmes"),
+    ("Gary Oldman"),
+    ("Heath Ledger"),
+    ("Aaron Eckhart"),
+    ("Maggie Gyllenhaal"),
+    ("Tom Hardy"),
+    ("Joseph Gordon-Levitt"),
+    ("Anne Hathaway");
+
+INSERT INTO studios (
+    name
+) VALUES (
+    "Warner Bros."
+);
+
+INSERT INTO movie_roles (
+    role
+) VALUES (
+    
+)
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
